@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="520" prefWidth="851.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kite.todolistapp.ToDoListController">
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="180" spacing="15" styleClass="left-pane card">
+            <padding>
+                <Insets bottom="20" left="15" right="15" top="20" />
+            </padding>
+            <children>
+                <Label styleClass="section-title" text="Categories" />
+                <ListView fx:id="categoryListView" prefHeight="330" styleClass="list-view category-list" />
+
+                <TextField fx:id="newCategoryField" prefWidth="160" promptText="New category name" styleClass="text-field" />
+                <Button fx:id="addCategoryButton" onAction="#handleAddCategory" styleClass="button primary-button" text="+ Add Category" />
+                <Button fx:id="deleteCategoryButton" onAction="#handleDeleteCategory" styleClass="button ghost-button" text="Delete Category">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></Button>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="520.0" prefWidth="710.0" spacing="20" styleClass="center-pane">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <Label styleClass="app-title" text="To-Do List" />
+
+            <VBox prefWidth="600" spacing="10" styleClass="card">
+                <TextField fx:id="taskField" prefWidth="600" promptText="Task name" styleClass="text-field" />
+
+                <HBox prefWidth="600" spacing="10">
+                    <TextField fx:id="dueTimeField" prefWidth="100" promptText="HH:MM" styleClass="text-field" />
+                    <DatePicker fx:id="dueDatePicker" prefWidth="160.0" styleClass="date-picker" />
+                    <ComboBox fx:id="categoryComboBox" prefWidth="165.0" promptText="Select Category" styleClass="combo-box" />
+                    <ComboBox fx:id="statusComboBox" prefWidth="165.0" promptText="Select Status" styleClass="combo-box" />
+                </HBox>
+
+                <HBox prefWidth="600" spacing="10">
+                    <Button fx:id="addTaskButton" onAction="#handleAddTask" styleClass="button primary-button" text="+ Add Task" />
+                    <Button fx:id="updateTaskButton" onAction="#handleUpdateTask" text="Update Task" />
+                    <Button fx:id="deleteTaskButton" onAction="#handleDeleteTask" styleClass="button ghost-button" text="Delete Task" />
+                </HBox>
+            </VBox>
+
+            <VBox prefWidth="600" spacing="10">
+                <children>
+                    <Label styleClass="section-title" text="Tasks" />
+                    <ListView fx:id="taskListView" prefHeight="300" prefWidth="600" styleClass="list-view task-view" />
+                </children>
+            </VBox>
+
+            <Label fx:id="statusLabel" styleClass="status-label" />
+        </VBox>
+    </center>
+
+</BorderPane>

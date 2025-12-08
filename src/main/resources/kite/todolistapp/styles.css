@@ -1,0 +1,191 @@
+.root {
+    -fx-font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -fx-font-size: 13px;
+    -fx-background-color: linear-gradient(to bottom, #0a0a0a, #111111);
+}
+
+* {
+    -fx-transition: all 0.25s ease;
+}
+
+.app-title, .section-title {
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 20px;
+    -fx-opacity: 0.94;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+}
+
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-padding: 14;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.05), 20, 0.1, 0, 0);
+}
+
+.left-pane, .center-pane {
+    -fx-background-color: transparent;
+}
+
+.text-field,
+.date-picker,
+.combo-box {
+    -fx-min-height: 50;
+    -fx-pref-height: 50;
+    -fx-max-height: 50;
+}
+
+.combo-box .text-field {
+    -fx-min-height: 50;
+    -fx-pref-height: 50;
+    -fx-max-height: 50;
+}
+
+.combo-box .arrow-button {
+    -fx-min-height: 50;
+    -fx-pref-height: 50;
+    -fx-max-height: 50;
+}
+
+.date-picker .text-field {
+    -fx-min-height: 50;
+    -fx-pref-height: 50;
+    -fx-max-height: 50;
+}
+
+.date-picker .arrow-button {
+    -fx-min-height: 50;
+    -fx-pref-height: 50;
+    -fx-max-height: 50;
+}
+
+.text-field,
+.date-picker,
+.combo-box {
+    -fx-background-color: rgba(255,255,255,0.07);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(255,255,255,0.12);
+    -fx-padding: 8 12;
+    -fx-text-fill: #eaeaea;
+    -fx-prompt-text-fill: rgba(255,255,255,0.4);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.2, 0, 2);
+}
+
+.text-field:focused,
+.date-picker:focused,
+.combo-box:focused {
+    -fx-border-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.22), 18, 0.25, 0, 0);
+}
+
+.text-field:hover,
+.date-picker:hover,
+.combo-box:hover {
+    -fx-background-color: rgba(255,255,255,0.10);
+}
+
+.combo-box,
+.combo-box .cell,
+.combo-box .list-cell {
+    -fx-text-fill: #eaeaea;
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #eaeaea;
+}
+
+.combo-box .list-view .list-cell {
+    -fx-text-fill: #eaeaea;
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+.combo-box .list-view .list-cell:selected {
+    -fx-background-color: rgba(255,255,255,0.20);
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.list-view {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 10;
+    -fx-padding: 6;
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-radius: 10;
+}
+
+.list-view .list-cell {
+    -fx-padding: 8 10;
+    -fx-background-color: transparent;
+    -fx-text-fill: #eaeaea;
+    -fx-background-radius: 8;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: rgba(255,255,255,0.07);
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.08), 12, 0.15, 0, 1);
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: rgba(255,255,255,0.14);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.18), 14, 0.2, 0, 1);
+}
+
+.button {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-border-width: 1;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-text-fill: #eaeaea;
+    -fx-padding: 8 16;
+    -fx-font-weight: 600;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.15), 18, 0.25, 0, 0);
+    -fx-translate-y: -2;
+}
+
+.button:armed {
+    -fx-background-color: rgba(255,255,255,0.18);
+}
+
+.primary-button {
+    -fx-background-color: rgba(255,255,255,0.14);
+    -fx-border-color: rgba(255,255,255,0.25);
+}
+
+.primary-button:hover {
+    -fx-background-color: rgba(255,255,255,0.20);
+}
+
+.ghost-button {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255,255,255,0.09);
+    -fx-text-fill: rgba(255,255,255,0.8);
+}
+
+.ghost-button:hover {
+    -fx-background-color: rgba(255,255,255,0.07);
+}
+
+.status-label {
+    -fx-text-fill: rgba(255,255,255,0.6);
+    -fx-font-size: 12px;
+}
