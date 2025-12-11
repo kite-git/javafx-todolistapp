@@ -8,5 +8,8 @@ A minimalistic JavaFX To-Do List Application with features such as:
 - JSON file data
 - Minimalistic layout
 
-Made by Kite
+
+What the UI looks like:
+<img width="851" height="547" alt="image" src="https://github.com/user-attachments/assets/cf1a918b-e392-4544-bd56-fd0cc718e7ea" />
+
 
